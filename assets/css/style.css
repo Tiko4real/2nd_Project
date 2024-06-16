@@ -6,3 +6,46 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h1, h2 {
+    color: #f87171;
+}
+
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#choices button, #random-choice-btn, #reset-btn, #home-btn {
+    margin: 10px;
+    padding: 15px;
+    font-size: 18px;
+    color: #080e18;
+    background-color: #f87171;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#choices button:hover, #random-choice-btn:hover, #reset-btn:hover, #home-btn:hover {
+    background-color: #fad6d6;
+    transition: 0.3s ease;
+}
+
+.choice-button i {
+    margin-right: 10px;
+}
+
+#scoreboard p {
+    font-size: 1.5em;
+}

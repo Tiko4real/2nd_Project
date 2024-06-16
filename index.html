@@ -35,7 +35,26 @@
     <div id="username-page" class="hidden">
         <h2>Enter Your Username</h2>
         <input type="text" id="username" placeholder="Username">
-        <button id="start-game-button">Start Game</button>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <div id="game-page" class="hidden">
+        <h2>Welcome, <span id="player-name"></span></h2>
+        <div id="scoreboard">
+            <p>Player: <span id="player-score">0</span></p>
+            <p>Computer: <span id="computer-score">0</span></p>
+        </div>
+
+        <div id="choices">
+            <button class="choice-btn" data-choice="rock"><i class="fas fa-hand-rock"></i> Rock</button>
+            <button class="choice-btn" data-choice="paper"><i class="fas fa-hand-paper"></i> Paper</button>
+            <button class="choice-btn" data-choice="scissors"><i class="fas fa-hand-scissors"></i> Scissors</button>
+            <button class="choice-btn" data-choice="lizard"><i class="fas fa-hand-lizard"></i> Lizard</button>
+            <button class="choice-btn" data-choice="spock"><i class="fas fa-hand-spock"></i> Spock</button>
+        </div>
+        <button id="random-choice-btn">Random Choice</button>
+        <button id="reset-btn">Reset</button>
+        <button id="home-btn">Home</button>
     </div>
 </body>
 
