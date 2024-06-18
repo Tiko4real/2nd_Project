@@ -90,3 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Please enter a username.');
         }
     });
+
+    choicesBtns.forEach(btn => {
+        btn.addEventListener('click', () => playRound(btn.getAttribute('data-choice')));
+    });
+
+    randomChoiceBtn.addEventListener('click', () => playRound(randomChoice()));
+    resetBtn.addEventListener('click', resetGame);
+    homeBtn.addEventListener('click', () => {
+        resetGame();
+        switchPage(gamePage, welcomePage);
+    });
+});
