@@ -79,3 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
    
     rulesBtn.addEventListener('click', () => show(rulesModal));
     closeRulesBtn.addEventListener('click', () => hide(rulesModal));
+    playBtn.addEventListener('click', () => switchPage(welcomePage, usernamePage));
+
+    startGameBtn.addEventListener('click', () => {
+        const username = usernameInput.value.trim();
+        if (username) {
+            setText(playerNameSpan, username);
+            switchPage(usernamePage, gamePage);
+        } else {
+            alert('Please enter a username.');
+        }
+    });
