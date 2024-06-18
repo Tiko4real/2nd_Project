@@ -76,6 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setText(computerScoreSpan, computerScore);
         setText(resultDiv, '');
     };
-
-
-    c
+   
+    rulesBtn.addEventListener('click', () => show(rulesModal));
+    closeRulesBtn.addEventListener('click', () => hide(rulesModal));
