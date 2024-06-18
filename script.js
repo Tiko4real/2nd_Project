@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const usernameInput = document.getElementById('username');
     const playerNameSpan = document.getElementById('player-name');
     const playerScoreSpan = document.getElementById('player-score');
-    const computerScoreSpan = document.getElementById('computer-score')
+    const computerScoreSpan = document.getElementById('computer-score');
     const choicesBtns = document.querySelectorAll('.choice-btn');
     const randomChoiceBtn = document.getElementById('random-choice-btn');
     const resultDiv = document.getElementById('result');
@@ -26,13 +26,56 @@ document.addEventListener('DOMContentLoaded', () => {
         scissors: ['paper', 'lizard'],
         lizard: ['spock', 'paper'],
         spock: ['scissors', 'rock']
-    }; 
+    };
 
-};const show = (element) => element.style.display = 'block';
-const hide = (element) => element.style.display = 'none';
-const setText = (element, text) => element.textContent = text;
+    const show = (element) => element.style.display = 'block';
+    const hide = (element) => element.style.display = 'none';
+    const setText = (element, text) => element.textContent = text;
 
-const switchPage = (hidePage, showPage) => {
-    hide(hidePage);
-    show(showPage);
-};
+    const switchPage = (hidePage, showPage) => {
+        hide(hidePage);
+        show(showPage);
+    };
+
+    const randomChoice = () => choices[Math.floor(Math.random() * choices.length)];
+    const determineWinner = (playerChoice, computerChoice) => {
+        if (playerChoice === computerChoice) return 'tie';
+        return winningCombinations[playerChoice].includes(computerChoice) ? 'player' : 'computer';
+    };
+
+    const displayResult = (result, playerChoice, computerChoice) => {
+        if (result === 'tie') {
+            setText(resultDiv, `It's a tie! Both chose ${playerChoice}.`);
+        } else if (result === 'player') {
+            setText(resultDiv, `You win! ${playerChoice} beats ${computerChoice}.`);
+            setText(playerScoreSpan, ++playerScore);
+        } else {
+            setText(resultDiv, `You lose! ${computerChoice} beats ${playerChoice}.`);
+            setText(computerScoreSpan, ++computerScore);
+        }
+    };
+
+    const checkGameOver = () => {
+        if (playerScore === 5 || computerScore === 5) {
+            alert(playerScore === 5 ? 'Congratulations! You won the game.' : 'Game over! The computer won.');
+            resetGame();
+        }
+    };
+
+    const playRound = (playerChoice) => {
+        const computerChoice = randomChoice();
+        const result = determineWinner(playerChoice, computerChoice);
+        displayResult(result, playerChoice, computerChoice);
+        checkGameOver();
+    };
+
+    const resetGame = () => {
+        playerScore = 0;
+        computerScore = 0;
+        setText(playerScoreSpan, playerScore);
+        setText(computerScoreSpan, computerScore);
+        setText(resultDiv, '');
+    };
+
+
+    c
