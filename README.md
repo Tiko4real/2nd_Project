@@ -61,17 +61,17 @@ This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard,
     - Git was used for version control.
 3. [GitHub:](https://github.com/)
     - GitHub is used to store the project's code.
-4. [VS Code]([https://fontawesome.com/](https://code.visualstudio.com/)
+4. [VS Code](https://code.visualstudio.com/)
   - Visual Studio used to write the code.
 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors.
 
--   [W3C Markup Validator](https://validator.w3.org/)   [Results](/assets/images/index.html-test)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  [Results](/assets/images/style.css-test)
--   [Lighthouse Report Desktop](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](/assets/images/lighthouse-report-desktop)
--   [Lighthouse Report Mobile](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](/assets/images/lighthouse-report-mobile)
+-   [W3C Markup Validator](https://validator.w3.org/)   [Results](assets/images/index.html-test)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  [Results](assets/images/style.css-test)
+-   [Lighthouse Report Desktop](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](assets/images/lighthouse-report-desktop)
+-   [Lighthouse Report Mobile](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](assets/images/lighthouse-report-mobile)
 
 ### Testing User Stories from User Experience (UX) Section
 
