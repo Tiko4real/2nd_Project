@@ -15,8 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const choicesBtns = document.querySelectorAll('.choice-btn');
     const randomChoiceBtn = document.getElementById('random-choice-btn');
     const resultDiv = document.getElementById('result');
+    const computerChoiceDiv = document.getElementById('computer-choice');
     const resetBtn = document.getElementById('reset-btn');
     const homeBtn = document.getElementById('home-btn');
+    const gameOverModal = document.getElementById('game-over-modal');
+    const gameOverMessage = document.getElementById('game-over-message');
+    const gameOverCloseBtn = document.getElementById('game-over-close-btn');
 
     // Game Variables
     let playerScore = 0;
@@ -35,23 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const hide = (element) => element.style.display = 'none';
     const setText = (element, text) => element.textContent = text;
 
-    // Switch Pages
+    
     const switchPage = (hidePage, showPage) => {
         hide(hidePage);
         show(showPage);
     };
 
-    // Generate Random Choice
+
     const randomChoice = () => choices[Math.floor(Math.random() * choices.length)];
 
-    // Determine Winner
+
     const determineWinner = (playerChoice, computerChoice) => {
         if (playerChoice === computerChoice) return 'tie';
         return winningCombinations[playerChoice].includes(computerChoice) ? 'player' : 'computer';
     };
 
-    // Display Result
+
     const displayResult = (result, playerChoice, computerChoice) => {
+        setText(computerChoiceDiv, `Computer chose ${computerChoice}.`);
         if (result === 'tie') {
             setText(resultDiv, `It's a tie! Both chose ${playerChoice}.`);
         } else if (result === 'player') {
@@ -63,15 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Check Game Over
+
+
     const checkGameOver = () => {
         if (playerScore === 5 || computerScore === 5) {
-            alert(playerScore === 5 ? 'Congratulations! You won the game.' : 'Game over! The computer won.');
+            const message = playerScore === 5 ? 'Congratulations! You won the game.' : 'Game over! The computer won.';
+            setText(gameOverMessage, message);
+            show(gameOverModal);
             resetGame();
         }
     };
 
-    // Play Round
+
     const playRound = (playerChoice) => {
         const computerChoice = randomChoice();
         const result = determineWinner(playerChoice, computerChoice);
@@ -79,27 +87,31 @@ document.addEventListener('DOMContentLoaded', () => {
         checkGameOver();
     };
 
-    // Reset Game
+
     const resetGame = () => {
         playerScore = 0;
         computerScore = 0;
         setText(playerScoreSpan, playerScore);
         setText(computerScoreSpan, computerScore);
         setText(resultDiv, '');
+        setText(computerChoiceDiv, '');
     };
-   
+
     // Event Listeners
     rulesBtn.addEventListener('click', () => show(rulesModal));
     closeRulesBtn.addEventListener('click', () => hide(rulesModal));
-    playBtn.addEventListener('click', () => switchPage(welcomePage, usernamePage));
+    playBtn.addEventListener('click', () => {
+        usernameInput.value = ''; // Clear username input on play button click
+        switchPage(welcomePage, usernamePage);
+    });
 
     startGameBtn.addEventListener('click', () => {
         const username = usernameInput.value.trim();
-        if (username) {
+        if (username.length >= 3 && username.length <= 15) {
             setText(playerNameSpan, username);
             switchPage(usernamePage, gamePage);
         } else {
-            alert('Please enter a username.');
+            alert('Username must be between 3 and 15 characters.');
         }
     });
 
@@ -113,4 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetGame();
         switchPage(gamePage, welcomePage);
     });
+
+    gameOverCloseBtn.addEventListener('click', () => hide(gameOverModal));
 });
