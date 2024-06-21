@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Page Elements
     const welcomePage = document.getElementById('welcome-page');
     const rulesModal = document.getElementById('rules-modal');
     const usernamePage = document.getElementById('username-page');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.getElementById('reset-btn');
     const homeBtn = document.getElementById('home-btn');
 
+    // Game Variables
     let playerScore = 0;
     let computerScore = 0;
     const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
@@ -28,21 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
         spock: ['scissors', 'rock']
     };
 
+    // Utility Functions
     const show = (element) => element.style.display = 'block';
     const hide = (element) => element.style.display = 'none';
     const setText = (element, text) => element.textContent = text;
 
+    // Switch Pages
     const switchPage = (hidePage, showPage) => {
         hide(hidePage);
         show(showPage);
     };
 
+    // Generate Random Choice
     const randomChoice = () => choices[Math.floor(Math.random() * choices.length)];
+
+    // Determine Winner
     const determineWinner = (playerChoice, computerChoice) => {
         if (playerChoice === computerChoice) return 'tie';
         return winningCombinations[playerChoice].includes(computerChoice) ? 'player' : 'computer';
     };
 
+    // Display Result
     const displayResult = (result, playerChoice, computerChoice) => {
         if (result === 'tie') {
             setText(resultDiv, `It's a tie! Both chose ${playerChoice}.`);
@@ -55,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Check Game Over
     const checkGameOver = () => {
         if (playerScore === 5 || computerScore === 5) {
             alert(playerScore === 5 ? 'Congratulations! You won the game.' : 'Game over! The computer won.');
@@ -62,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Play Round
     const playRound = (playerChoice) => {
         const computerChoice = randomChoice();
         const result = determineWinner(playerChoice, computerChoice);
@@ -69,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkGameOver();
     };
 
+    // Reset Game
     const resetGame = () => {
         playerScore = 0;
         computerScore = 0;
@@ -77,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setText(resultDiv, '');
     };
    
+    // Event Listeners
     rulesBtn.addEventListener('click', () => show(rulesModal));
     closeRulesBtn.addEventListener('click', () => hide(rulesModal));
     playBtn.addEventListener('click', () => switchPage(welcomePage, usernamePage));
