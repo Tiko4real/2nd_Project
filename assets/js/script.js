@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hide = (element) => element.style.display = 'none';
     const setText = (element, text) => element.textContent = text;
 
-    
+
     const switchPage = (hidePage, showPage) => {
         hide(hidePage);
         show(showPage);
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rulesBtn.addEventListener('click', () => show(rulesModal));
     closeRulesBtn.addEventListener('click', () => hide(rulesModal));
     playBtn.addEventListener('click', () => {
-        usernameInput.value = ''; // Clear username input on play button click
+        usernameInput.value = ''; // Clear username input on play button click! 
         switchPage(welcomePage, usernamePage);
     });
 
