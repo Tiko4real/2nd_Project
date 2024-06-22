@@ -4,7 +4,7 @@
 
 This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard, Spock" concept. It is designed to be responsive and accessible on a range of devices, providing a enjoyable user experience.
 
-<h2 align="center"><img src= (/assets/images/preview-image.PNG)" alt="Game Screenshot"></h2>
+<h2 align="center"><img src= "assets/images/preview-image.png" alt="Game Screenshot"></h2>
 
 ## User Experience (UX)
 
@@ -41,9 +41,16 @@ This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard,
 ## Features
 
 -   Responsive design for all device sizes
+    [Mobile](assets/images/gameplay-mobile.png)
+    AND
+    [Desktop](assets/images/gameplay-desktop.png)
+   
 -   Interactive game elements with real-time score tracking
+    [Score](assets/images/score.png)
 -   Random choice feature for add fun
+    [Random](assets/images/random-choice.png)
 -   Option to reset the game and return to the home screen
+    [Reset](assets/images/reset.png)
 
 ## Technologies Used
 
@@ -69,9 +76,9 @@ This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard,
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors.
 
 -   [W3C Markup Validator](https://validator.w3.org/)   [Results](assets/images/index.html-test.png)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  [Results](assets/images/style.css-test)
--   [Lighthouse Report Desktop](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](assets/images/lighthouse-report-desktop)
--   [Lighthouse Report Mobile](h[ttps://validator.w3.org/](https://developer.chrome.com/docs/lighthouse/overview)) [Results](assets/images/lighthouse-report-mobile)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  [Results](assets/images/style.css-test.png)
+-   [Lighthouse Report Desktop](https://developer.chrome.com/docs/lighthouse/overview) [Results](assets/images/Lighthouse-Report-desktop.png)
+-   [Lighthouse Report Mobile](https://developer.chrome.com/docs/lighthouse/overview) [Results](assets/images/Lighthouse-Report-mobile.png)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -123,11 +130,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The game was tested on two browsers: Chrome and Edge.
 -   The game was tested on various devices: desktop and mobile.
 -   Friends and family members were asked to test the game and provide feedback.
-
-### Known Bugs
-
--   The rules modal may not close correctly on some mobile devices.
--   Inconsistent font rendering on older versions of Internet Explorer.
+-   The game was tested many times manualy to make sure that the game is clean without bugs.
+-   Friends and family members were asked about the colors to make sure the game have good color coordination.
 
 ## Deployment
 
