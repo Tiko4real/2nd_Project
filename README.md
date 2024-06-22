@@ -73,12 +73,13 @@ This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard,
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors.
+The W3C Markup Validator, W3C CSS Validator and jshint Services were used to validate every page of the project to ensure there were no syntax errors.
 
 -   [W3C Markup Validator](https://validator.w3.org/)   [Results](assets/images/index.html-test.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  [Results](assets/images/style.css-test.png)
 -   [Lighthouse Report Desktop](https://developer.chrome.com/docs/lighthouse/overview) [Results](assets/images/Lighthouse-Report-desktop.png)
 -   [Lighthouse Report Mobile](https://developer.chrome.com/docs/lighthouse/overview) [Results](assets/images/Lighthouse-Report-mobile.png)
+-   [Jshint](https://jshint.com/) [Results](assets/images/js-test.png)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -175,5 +176,12 @@ The project was deployed to GitHub Pages using the following steps:
 ### Acknowledgements
 
 -   My mentor for continuous helpful feedback.
+-   [Addeventlistener](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+-   [Addeventlistener-more](https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/)
+-   [Addeventlistener-tutorial](https://www.bitdegree.org/learn/javascript-addeventlistener)
+-   [Modal](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+-   [Css-display](https://www.w3schools.com/cssref/pr_class_display.php)
+-   [Arrays](https://www.w3schools.com/js/js_arrays.asp)
+-   [Math-random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 
 
