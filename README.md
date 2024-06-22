@@ -4,7 +4,7 @@
 
 This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard, Spock" concept. It is designed to be responsive and accessible on a range of devices, providing a enjoyable user experience.
 
-<h2 align="center"><img src= (assets/images/preview-image.png" alt="Game Screenshot"></h2>
+<h2 align="center"><img src= "assets/images/preview-image.png" alt="Game Screenshot"></h2>
 
 ## User Experience (UX)
 
@@ -41,8 +41,9 @@ This is an interactive game based on the popular "Rock, Paper, Scissors, Lizard,
 ## Features
 
 -   Responsive design for all device sizes
-    [Mobile](assets\images\gameplay-mobile.png)
-    [Desktop](assets\images\gameplay-desktop.png)
+    [Mobile](assets/images/gameplay-mobile.png)
+    AND
+    [Desktop](assets/images/gameplay-desktop.png)
    
 -   Interactive game elements with real-time score tracking
     [Score](assets/images/score.png)
